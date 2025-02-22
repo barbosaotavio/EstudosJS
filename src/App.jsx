@@ -11,12 +11,14 @@ function App() {
     {name: 'Romin', age: 21, salary: 4500, active: true, team:'Dev', bonus: 0 },
     
  ]
- 
-const users = data.filter((users) => {
-  return users.salary >= 4000 && users.active 
-})
 
-console.log(users)
+ const indexUser = data.findIndex((user) => {
+  return user.name === 'Alice'
+ })
+
+  console.log(indexUser)
+  console.log(data[indexUser].salary = 4100)
+  console.log(data)
 }
 
 export default App

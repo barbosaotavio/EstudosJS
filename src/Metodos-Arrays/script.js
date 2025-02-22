@@ -37,7 +37,20 @@ diferente do find ele filtra todos que são maior que 4000 e são ativas
 não apenas 1 resultado.
 */
 
+const indexUser = data.findIndex((user) => {
+    return user.name === 'Alice'
+   })
+  
+    console.log(indexUser)
+    console.log(data[indexUser].active = false)
+    console.log(data)
 
+/*
+findIndex usado para buscar a posição da pesquisa 
+e podendo manipular os dados
+ex. podenos mudar o active de 'true' para 'false' 
+dentre também outras informações.
+*/
   
 
 
