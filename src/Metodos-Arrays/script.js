@@ -13,7 +13,8 @@ const user = data.find((user) => {
 })
 
 console.log(user) 
-/* Metodo find usado para procurar idade >= 30
+/* Metodo find
+ usado para procurar idade >= 30
 nao importa se a idade que vier primeiro for maior que a próxima idade
 
 ex. name: Alice age: 37
@@ -31,7 +32,8 @@ const users = data.filter((users) => {
 console.log(users)
 
 /*
-Metodo filter usarado para filtrar os dados com a salário >= 400
+Metodo filter
+ usarado para filtrar os dados com a salário >= 400
 e saber se a pessoa é ativa ou não (true ou false)
 diferente do find ele filtra todos que são maior que 4000 e são ativas
 não apenas 1 resultado.
@@ -42,16 +44,43 @@ const indexUser = data.findIndex((user) => {
    })
   
     console.log(indexUser)
+    console.log(data[indexUser].salary = 4500)
     console.log(data[indexUser].active = false)
     console.log(data)
 
 /*
-findIndex usado para buscar a posição da pesquisa 
+findIndex 
+usado para buscar a posição da pesquisa 
 e podendo manipular os dados
 ex. podenos mudar o active de 'true' para 'false' 
 dentre também outras informações.
 */
   
+const iten = data.map((user) =>{
+
+    if(user.salary <= 2500){
+      user.salary += 900;
+      user.bonus += 3;
+    }
+    return {
+      name: user.name,
+      salary: user.salary,
+      bonus: user.bonus,
+    }
+  
+  })
+
+  console.log(iten)
+
+/*
+Metodo Map
+usado para percorrer todo o nosso array 
+e econtrar a condição que estamos pedindo 
+ex. se o salário for <= 2500 ele modifica 
+e acrescenta +900 como no ex. abaixo
+fora outras manipulações possiveis fazer.
+*/
+
 
 
 
