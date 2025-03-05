@@ -13,7 +13,7 @@ const user = data.find((user) => {
 })
 
 console.log(user) 
-/* Metodo find
+/* Método find
  usado para procurar idade >= 30
 nao importa se a idade que vier primeiro for maior que a próxima idade
 
@@ -73,7 +73,7 @@ const iten = data.map((user) =>{
   console.log(iten)
 
 /*
-Metodo Map
+Método Map
 usado para percorrer todo o nosso array 
 e econtrar a condição que estamos pedindo 
 ex. se o salário for <= 2500 ele modifica 
@@ -81,6 +81,42 @@ e acrescenta +900 como no ex. abaixo
 fora outras manipulações possiveis fazer.
 */
 
+console.log(data.reverse())
+/*
+Código usado para inverter o nosso array 
+contando de trás para frente 
+ou de baixo para cima.
+*/
+
+const userInactive = data.some((user)=>{
+  return user.active === false 
+ })
+
+ console.log(userInactive)
+
+ /*
+ Método some
+ Usado para percorrer nossa lista e caso tenha 
+ um item === a false 
+ ele não retorna o item com o active false 
+ e sim ele retorna 'true' como resposta 
+ ou 'false' caso não tenha nenhum item 
+ comforme pedimos para verificar.
+ */
+
+const userActive = data.every((user)=>{
+  return user.active === true
+})
+console.log(userActive)
+ /*
+Método Every
+o método every diferente do some, 
+ele percorre toda nossa lista e retorna como 
+'true' ou 'false'...
+porem, todos os item tem que esta com o active como true 
+caso um esteja como false ele retornara 'false'.
+
+ */
 
 
 
