@@ -12,10 +12,11 @@ function App() {
     
  ]
 
-const userActive = data.every((user)=>{
-  return user.active === true
-})
-console.log(userActive)
+const totalSalarios = data.reduce((total, user)=>{
+  return total += user.salary 
+}, 0)
+
+console.log(totalSalarios)
 }
 
 export default App

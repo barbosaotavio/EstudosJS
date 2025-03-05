@@ -115,12 +115,21 @@ ele percorre toda nossa lista e retorna como
 'true' ou 'false'...
 porem, todos os item tem que esta com o active como true 
 caso um esteja como false ele retornara 'false'.
-
  */
 
+const totalSalarios = data.reduce((total, user)=>{
+return total += user.salary 
+}, 0)
 
+console.log(totalSalarios)
 
-
-
-
-
+/*
+Reduce
+Usado para fazer a soma de todos os salários
+que temos na nossa lista. 
+começando com o valor inicial 0 no 'total'
+e assim ele vai somando cada item da nossa lista,
+caso tenhamos uma equipe de trabalho, e queremos
+saber o valor do custo de pagamento da equipe 
+basta usar esse método para fazer a soma de uma vez só.
+*/
